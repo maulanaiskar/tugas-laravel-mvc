@@ -12,9 +12,10 @@
 */
 
 use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/register', function () {
@@ -22,3 +23,15 @@ Route::get('/register', function () {
 });
 
 Route::post('/welcome', 'RegisterController@getNama');
+
+Route::get('/master', function () {
+    return view('master');
+});
+
+Route::get('/', function () {
+    return view("awal");
+});
+
+Route::get('/data-tables', function () {
+    return view("datatables");
+});
